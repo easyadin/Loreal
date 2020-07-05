@@ -1,20 +1,617 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border ion-padding mainHeader">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <img src="../../assets/raw/logo.png">
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button href="#home">HOME</ion-button>
+      <ion-button href="#lctoken">LC TOKEN</ion-button>
+      <ion-button href="#technology">TECHNOLOGY</ion-button>
+      <ion-button href="#mission">MISSION</ion-button>
+      <ion-button href="#vission">VISION</ion-button>
+      <ion-button href="#whitepaper">WHITEPAPER</ion-button>
+      <ion-button href="#tea">TEA</ion-button>
+      <ion-button href="#roadmap">ROADMAP</ion-button>
+      <ion-button href="#contact">CONTACT</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- mobile menu -->
+<ion-menu-toggle>
+  <ion-menu side="end" menuId="first" contentId="main" class="mobileMenu" type="overlay">
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list lines="none">
+        <ion-item detail="false" (click)="debug()" button>
+          <ion-label>HOME</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#lctoken">
+          <ion-label>LC TOKEN</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#technology">
+          <ion-label>TECHNOLOGY</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#mission">
+          <ion-label>MISSION</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#vission">
+          <ion-label>VISSION</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#whitepaper">
+          <ion-label>WHITEPAPER</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#team">
+          <ion-label>TEAM</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#roadmap">
+          <ion-label>ROADMAP</ion-label>
+        </ion-item>
+        <ion-item button detail="false" routerLink="#contact">
+          <ion-label>CONTACT</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-footer class="ion-no-border">
+      <ion-toolbar>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-button>
+          <ion-button>
+            <ion-icon name="logo-instagram"></ion-icon>
+          </ion-button>
+          <ion-button>
+            <ion-icon name="logo-youtube"></ion-icon>
+          </ion-button>
+          <ion-button>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+</ion-menu-toggle>
+
+
+<ion-content [fullscreen]="true" class="mainContent">
+  <!-- top landing -->
+  <section id="home">
+    <img src="../../assets/raw/header BG.png">
+
+    <!-- top landing text-->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="5">
+          <ion-item lines="none" detail="false">
+            <ion-label>
+              <h3>THE BEAUTY CARE APP</h3>
+              <h1 class="loreal">LOREAL</h1>
+              <p>LOREAL coin will be used in plastic hosoitals, hair salon, skin care places, massage shop etc. As of
+                now
+                they have affiliate relationship/partner with 1300+ vendors.</p>
+              <ion-buttons>
+                <ion-button fill="outline" class="rbtn">EXPLORE</ion-button>
+              </ion-buttons>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="7">
+          <img src="../../assets/raw/mobile01.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <section id="lctoken">
+    <img src="../../assets/raw/B LPC token.png" class="floatingImg">
+    <ion-item lines="none" detail="false">
+      <ion-label class="heroText">
+        LPC Token
+      </ion-label>
+    </ion-item>
+    <!-- listings -->
+
+    <div class="flexList">
+      <ion-label>
+        <img src="../../assets/raw/Asset 10.png">
+        <h3>SURGERY HOSPITAL</h3>
+        <p>State-of-the-art surgical procedure in which the conventional laparoscopic technique is combined with high
+          precision technology.</p>
+      </ion-label>
+
+      <ion-label>
+        <img src="../../assets/raw/Asset 11.png">
+        <h3>HAIR SALON</h3>
+        <p>
+          Technology is changing everything about the way you interact with your clients, from how you attract SALON
+          TODAY digs deep.
+        </p>
+      </ion-label>
+
+      <ion-label>
+        <img src="../../assets/raw/Asset 12.png">
+        <h3>MASSAGE</h3>
+        <p>
+          State-of-the-art Percussion Massage Device Featuring Quiet Glide™ Technology. A Symphony of Power, Performance
+          and Variability.
+        </p>
+      </ion-label>
+
+      <ion-label>
+        <img src="../../assets/raw/Asset 13.png">
+        <h3>SKIN CARE</h3>
+        <p>
+          Loreal Advanced Skincare Technologies brings together the latest technological leaps and scientific
+          innovations
+          to create potent solutions.
+        </p>
+      </ion-label>
+    </div>
+  </section>
+
+
+  <section id="technology">
+    <ion-item lines="none" detail="false">
+      <ion-label class="heroText">
+        Technology
+      </ion-label>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="7">
+          <img src="../../assets/raw/bg of mobile02.png">
+          <img src="../../assets/raw/mobile02.png" class="floatTchImg">
+        </ion-col>
+        <ion-col size="5">
+          <ion-list lines="none">
+            <ion-item detail="false">
+              <ion-avatar slot="start">
+                <img src="../../assets/raw/Asset 18.png">
+                01.
+              </ion-avatar>
+              <ion-label>
+                <h2>Simple & easy</h2>
+                <p>The globe's biggest tech companies have innovative tendencies and are poised to further increase
+                  their market valuation in the face of setbacks.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item detail="false">
+              <ion-avatar slot="start">
+                <img src="../../assets/raw/Asset 17.png">
+                02.
+              </ion-avatar>
+              <ion-label>
+                <h2>Powerful</h2>
+                <p>The globe's biggest tech companies have innovative tendencies and are poised to further increase
+                  their market valuation in the face of setbacks.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item detail="false">
+              <ion-avatar slot="start">
+                <img src="../../assets/raw/Asset 18.png">
+                03.
+              </ion-avatar>
+              <ion-label>
+                <h2>Deliver Results</h2>
+                <p>The globe's biggest tech companies have innovative tendencies and are poised to further increase
+                  their market valuation in the face of setbacks.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item detail="false">
+              <ion-buttons class="rbtn2">
+                <ion-button fill="outline">
+                  GET STARTED
+                </ion-button>
+              </ion-buttons>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <section id="mission">
+    <img src="../../assets/raw/globe dots.png" class="mvMimg">
+    <img src="../../assets/raw/bg_watch .png" class="mvMng">
+    <img src="../../assets/raw/watch.png" class="mvMng2">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list lines="none">
+            <ion-item detail="false">
+              <ion-avatar slot="start">
+                <img src="../../assets/raw/Asset 22.png"> </ion-avatar>
+              <ion-label>
+                <h2>Deliver Results</h2>
+                <p>The globe's biggest tech companies have innovative tendencies and are poised to further increase
+                  their market valuation in the face of setbacks.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item detail="false">
+              <ion-avatar slot="start">
+                <img src="../../assets/raw/Asset 22.png"> </ion-avatar>
+              <ion-label>
+                <h2>Deliver Results</h2>
+                <p>The globe's biggest tech companies have innovative tendencies and are poised to further increase
+                  their market valuation in the face of setbacks.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item detail="false">
+              <ion-avatar slot="start">
+                <img src="../../assets/raw/Asset 22.png"> </ion-avatar>
+              <ion-label>
+                <h2>Deliver Results</h2>
+                <p>The globe's biggest tech companies have innovative tendencies and are poised to further increase
+                  their market valuation in the face of setbacks.</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item detail="false">
+              <ion-avatar slot="start">
+                <img src="../../assets/raw/Asset 22.png"> </ion-avatar>
+              <ion-label>
+                <h2>Deliver Results</h2>
+                <p>The globe's biggest tech companies have innovative tendencies and are poised to further increase
+                  their market valuation in the face of setbacks.</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col class="mvCol2">
+          <ion-item detail="false" lines="none">
+            <ion-label>
+              <h2>Mission & Vision</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea</p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- white paper -->
+  <section id="whitepaper">
+    <img src="../../assets/raw/WP side BG.png" class="wpCol1Img">
+    <img src="../../assets/raw/WP lines.png" class="wpLines">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="5">
+          <ion-item detail="false" lines="none">
+            <ion-label>
+              <h2>Whitepaper</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea</p>
+            </ion-label>
+          </ion-item>
+          <ion-item detail="false" lines="none">
+            <ion-buttons class="rbtn2">
+              <ion-button fill="outline">GET IT NOW!</ion-button>
+            </ion-buttons>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="7">
+          <img src="../../assets/raw/whitepaper.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-item lines="none" detail="false" class="team">
+      <ion-label class="heroText">
+        Team Members
+      </ion-label>
+    </ion-item>
+    <ion-item detail="false" lines="none" class="subTitle">
+      <ion-label>
+        <p>These are the innovators who tinker with blockchain technology to give the beauty industry a total make-over.
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <!-- members -->
+    <ion-item lines="none" detail="false" class="memberItem" id="#team">
+      <div class="membersList">
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Fairman</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+      </div>
+    </ion-item>
+
+    <ion-item lines="none" detail="false" class="memberItem">
+      <div class="membersList">
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Fairman</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+      </div>
+
+    </ion-item>
+
+    <ion-item lines="none" detail="false" class="memberItem">
+      <div class="membersList">
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Doe</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+        <ion-label>
+          <img src="../../assets/raw/teamMember circle.png">
+          <h2>John Fairman</h2>
+          <p>Chairman</p>
+          <p>An experienced C-level executive in the IT and fintech industry, Ethan ventured into blockchain technology
+            after receiving a primer on Bitcoin from top Korean executives. He worked at Samsung for more than 10 years.
+            Now, he is working passionately to help cryptocurrencies gain mass adoption.
+          </p>
+        </ion-label>
+      </div>
+    </ion-item>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="timeline">
+    <ion-item lines="none" detail="false" class="team">
+      <ion-label class="heroText">
+        Road Map
+      </ion-label>
+    </ion-item>
+    <ol>
+      <li>
+        <div>
+          <img src="../../assets/edits/roadMap_Top.png">
+          <ion-label>
+            <h2>2020</h2>
+            <p>June</p>
+          </ion-label>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <img src="../../assets/edits/roadMap_Bottom.png">
+          <ion-label>
+            <h2>2020</h2>
+            <p>July</p>
+          </ion-label>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <img src="../../assets/edits/roadMap_Top.png">
+          <ion-label>
+            <h2>2020</h2>
+            <p>August</p>
+          </ion-label>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <img src="../../assets/edits/roadMap_Bottom.png">
+          <ion-label>
+            <h2>2020</h2>
+            <p>September</p>
+          </ion-label>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <img src="../../assets/edits/roadMap_Top.png">
+          <ion-label>
+            <h2>2020</h2>
+            <p>October</p>
+          </ion-label>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <img src="../../assets/edits/roadMap_Bottom.png">
+          <ion-label>
+            <h2>2020</h2>
+            <p>November</p>
+          </ion-label>
+        </div>
+      </li>
+
+
+      <li>
+        <div>
+          <img src="../../assets/edits/roadMap_Top.png">
+          <ion-label>
+            <h2>2020</h2>
+            <p>December</p>
+          </ion-label>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- contact -->
+
+  <section id="contact">
+    <img src="../../assets/raw/slope footer.png">
+
+    <ion-grid class="contactItems">
+      <ion-row>
+        <ion-col size="3">
+          <ion-label>
+            <h2>ABOUT</h2>
+            <p>Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum
+              molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.</p>
+          </ion-label>
+        </ion-col>
+
+        <ion-col size="3">
+          <ion-label>
+            <h2>CONTACTS</h2>
+            <p>Address: 5687 Dubai, United Arab Emirate</p>
+            <p>Phone: (971)123-4567; (971)123-4567</p>
+            <p>office@loreal.coin.com</p>
+          </ion-label>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-label>
+            <div>
+              <input placeholder="Name">
+              <input placeholder="Email">
+            </div>
+            <div>
+              <textarea placeholder="Message"></textarea>
+            </div>
+
+            <ion-buttons>
+              <ion-button fill="outline"> SUBMIT</ion-button>
+            </ion-buttons>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <section>
+    <ion-toolbar>
+      <ion-title>LOREAL COIN 2020</ion-title>
+      <ion-buttons slot="primary">
+        <ion-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-youtube"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </section>
 </ion-content>
